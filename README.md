@@ -3,7 +3,8 @@
 Awwards
 
 # Author
-**[Enock Kipronoh](https://github.com/encok)**
+> [Enock Kipronoh](https://github.com/encok "encok")
+
 
 ## Link to Live Site 
 
