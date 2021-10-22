@@ -1,5 +1,5 @@
 """
-WSGI config for RecipesProject project.
+WSGI config for Projects project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
