@@ -34,12 +34,15 @@ Run the following command for tests<br>
 * $ python manage.py test user
 
 ## Technologies Used
+---
+```
 * Python 3.8
 * HTML5, CSS and Bootstrap4
 * jdango3.2.4 Framework
 * Postgressql
 * Heroku
-
+```
+---
 ## Known Bugs
 No known bugs so far
 
@@ -49,5 +52,6 @@ email: enckkipronoh@gmail.com<br/>
 Phone: 0717854859
 ## License
 This is the link to the MIT license used<br/><br/>
+> License link
 
 
