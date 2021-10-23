@@ -3,7 +3,7 @@ from .forms import UserRegistrationForm, CreateProfileForm, LoginForm
 from django.contrib.auth import authenticate, login, logout
 from .models import Profile
 from django.contrib.auth.models import User
-from projects.models import recipe
+from projects.models import project
 from django.db.models import Q
 from django.contrib.auth.decorators import login_required
 from django.views.generic import TemplateView
@@ -21,7 +21,7 @@ class UserHome(TemplateView):
     def get(self,request,*args,**kwargs):
         user = request.user.id
         if user:
-            data = recipe.objects.filter(~Q(created_by=user))
+            data = project.objects.filter(~Q(created_by=user))
             self.context['data'] = data
             try:
                 profile = self.get_object(user)
@@ -113,7 +113,7 @@ class ViewProfile(TemplateView):
             self.context['profile'] = profile
         except Exception:
             pass
-        data = recipe.objects.filter(created_by=user_id)
+        data = project.objects.filter(created_by=user_id)
         self.context['data'] = data
         return render(request,self.template_name,self.context)
 
