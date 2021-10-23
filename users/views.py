@@ -3,7 +3,7 @@ from .forms import UserRegistrationForm, CreateProfileForm, LoginForm
 from django.contrib.auth import authenticate, login, logout
 from .models import Profile
 from django.contrib.auth.models import User
-from recipes.models import recipe
+from projects.models import recipe
 from django.db.models import Q
 from django.contrib.auth.decorators import login_required
 from django.views.generic import TemplateView

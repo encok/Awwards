@@ -1,5 +1,5 @@
 from django.shortcuts import render,redirect
-from recipes.models import recipe
+from projects.models import recipe
 from django.views.generic import TemplateView
 
 # Create your views here.
