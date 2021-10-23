@@ -10,4 +10,4 @@ urlpatterns = [path('register', views.UserRegister.as_view(), name="register"),
                path('logout',views.SignOut.as_view(),name="logout"),
                path('viewprofile',views.ViewProfile.as_view(),name="viewprofile"),
                path('editprofile',views.EditProfile.as_view(),name="editprofile"),
-]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+]

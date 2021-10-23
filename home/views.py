@@ -1,5 +1,5 @@
 from django.shortcuts import render,redirect
-from projects.models import project
+from recipes.models import recipe
 from django.views.generic import TemplateView
 
 # Create your views here.
@@ -13,6 +13,6 @@ class Home(TemplateView):
         user = request.user.id
         if user:
             return redirect('userhome')
-        data = project.objects.all()
+        data = recipe.objects.all()
         self.context['data'] = data
         return render(request,self.template_name , self.context)
