@@ -6,5 +6,5 @@ class CreateRecipeForm(ModelForm):
     class Meta:
         model = project
         fields = "__all__"
-        widgets = {'ingredient':forms.Textarea(),'description':forms.Textarea(),
+        widgets = {'description':forms.Textarea(),
                    'created_by':forms.HiddenInput()}
