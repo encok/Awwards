@@ -58,15 +58,15 @@ class EditRecipe(TemplateView):
 
     def get(self, request, *args, **kwargs):
         id = kwargs.get('id')
-        recipes = get_object_or_404(recipe, pk=id)
-        form = self.form_class(instance=recipes)
+        projects = get_object_or_404(recipe, pk=id)
+        form = self.form_class(instance=projects)
         self.context['form'] = form
         return render(request,self.template_name , self.context)
 
     def post(self,request,*args,**kwargs):
         id = kwargs.get('id')
-        recipes = get_object_or_404(recipe, pk=id)
-        form = self.form_class(instance=recipes,data=request.POST,files=request.FILES)
+        projects = get_object_or_404(recipe, pk=id)
+        form = self.form_class(instance=projects,data=request.POST,files=request.FILES)
         if form.is_valid():
             form.save()
             return redirect('viewprofile')
@@ -79,8 +79,8 @@ class EditRecipe(TemplateView):
 class DeleteRecipe(TemplateView):
     def get(self, request, *args, **kwargs):
         id = kwargs.get('id')
-        recipes = get_object_or_404(recipe, pk=id)
-        recipes.delete()
+        projects = get_object_or_404(recipe, pk=id)
+        projects.delete()
         return redirect('viewprofile')
 
 
