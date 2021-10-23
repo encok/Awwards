@@ -11,7 +11,8 @@
 <div class="container">
     <form method="post" enctype="multipart/form-data">
         {%csrf_token %}
-        <h3>Edit Profile</h3>
+        
+        <h3>Update Profile</h3>
         {% include 'home/form.html' with form=form %}
         <br>
         <button type="submit" class="btn btn-primary">Submit</button>

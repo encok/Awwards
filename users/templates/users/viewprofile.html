@@ -18,7 +18,7 @@
 <body>
 <!--navbar-->
 {% include 'home/nav.html' %}
-<img src="{% static 'home/images/bgimg2.jpeg' %}" class="img-fluid" style="background-image">
+<img src="{% static 'home/images/download22.jpeg' %}" class="img-fluid" style="background-image">
 <!--bio-->
 <div class="container">
     <div class="row">
@@ -39,13 +39,13 @@
             </div>
         </div>
         <div class="col-6">
-            <a href="{% url 'createrecipe' %}">
+            <!-- <a href="{% url 'createrecipe' %}"> -->
             <img src="{% static 'home/images/share.png' %}">
             </a>
         </div>
     </div>
 </div>
-<!--listing all projects-->
+<!--listing all recipes-->
  {% include 'home/card.html' %}
 </body>
 </html>

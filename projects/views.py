@@ -1,6 +1,6 @@
 from django.shortcuts import render,redirect
 from .forms import CreateRecipeForm
-from .models import recipe
+from .models import project
 from users.models import Profile
 from django.contrib.auth.decorators import login_required
 from django.views.generic import TemplateView
@@ -37,7 +37,7 @@ class ViewRecipe(TemplateView):
 
     def get(self,request,*args,**kwargs):
         id =kwargs.get('id')
-        obj = get_object_or_404(recipe,pk=id)
+        obj = get_object_or_404(project,pk=id)
         self.context['obj'] = obj
         user = request.user.id
         if user:
@@ -58,15 +58,15 @@ class EditRecipe(TemplateView):
 
     def get(self, request, *args, **kwargs):
         id = kwargs.get('id')
-        projects = get_object_or_404(recipe, pk=id)
-        form = self.form_class(instance=projects)
+        recipes = get_object_or_404(project, pk=id)
+        form = self.form_class(instance=recipes)
         self.context['form'] = form
         return render(request,self.template_name , self.context)
 
     def post(self,request,*args,**kwargs):
         id = kwargs.get('id')
-        projects = get_object_or_404(recipe, pk=id)
-        form = self.form_class(instance=projects,data=request.POST,files=request.FILES)
+        recipes = get_object_or_404(project, pk=id)
+        form = self.form_class(instance=recipes,data=request.POST,files=request.FILES)
         if form.is_valid():
             form.save()
             return redirect('viewprofile')
@@ -79,8 +79,8 @@ class EditRecipe(TemplateView):
 class DeleteRecipe(TemplateView):
     def get(self, request, *args, **kwargs):
         id = kwargs.get('id')
-        projects = get_object_or_404(recipe, pk=id)
-        projects.delete()
+        recipes = get_object_or_404(project, pk=id)
+        recipes.delete()
         return redirect('viewprofile')
 
 

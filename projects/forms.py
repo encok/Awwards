@@ -1,10 +1,10 @@
 from django.forms import ModelForm
-from .models import recipe
+from .models import project
 from django import forms
 
 class CreateRecipeForm(ModelForm):
     class Meta:
-        model = recipe
+        model = project
         fields = "__all__"
-        widgets = {'ingredient':forms.Textarea(),'How_to_make':forms.Textarea(),
+        widgets = {'description':forms.Textarea(),
                    'created_by':forms.HiddenInput()}
