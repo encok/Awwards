@@ -18,7 +18,7 @@
 {% include 'home/nav.html' %}
 <div class="container">
     <div class="card mb-3">
-        <img src="/{{obj.project_pic}}" class="card-img-top" alt="...">
+        <img src="{{obj.project_pic.url}}" class="card-img-top" alt="...">
         <h5 class="card-header">{{obj.category}}</h5>
         <div class="card-body">
               <ul class="list-group list-group-flush">
@@ -30,6 +30,9 @@
                   <li class="list-group-item">
                       <h6><b>Description</b></h6>
                       {{obj.description}}</li>
+                  <li class="list-group-item">
+                        <h6><i class="btn btn-info">Ratings:<a><i class="fa fa-star"></i></button></a></i></h6>
+                        </li>
               </ul>
         </div>
         <div class="card-footer text-muted">

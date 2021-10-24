@@ -138,8 +138,8 @@ STATIC_URL = '/static/'
 
 MEDIA_URL = '/media/'
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.RawMediaCloudinaryStorage'
-cloudinary.config (
-  cloud_name = "enock-photoshare", 
+cloudinary.config(
+  cloud_name ="enock-photoshare", 
   api_key = "528228593828417", 
   api_secret = "fpcwnXX4nQPiHpva17H58KySXsk",
 )
