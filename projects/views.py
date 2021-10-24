@@ -28,7 +28,7 @@ class CreateRecipe(TemplateView):
         else:
             self.context['form'] = form
             return render(request,self.template_name,self.context)
-
+ 
 
 @method_decorator(login_required(login_url='login'), name='dispatch')
 class ViewRecipe(TemplateView):
@@ -84,3 +84,15 @@ class DeleteRecipe(TemplateView):
         return redirect('viewprofile')
 
 
+# def search_results(request):
+
+#     if 'project' in request.GET and request.GET["project"]:
+#         search_term = request.GET.get("project")
+#         searched_articles = project.search_by_title(search_term)
+#         message = f"{search_term}"
+
+#         return render(request, 'home/search.html',{"message":message,"projects": searched_articles})
+
+#     else:
+#         message = "You haven't searched for any term"
+#         return render(request, 'home/search.html',{"message":message})
