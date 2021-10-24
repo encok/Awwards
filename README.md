@@ -7,7 +7,7 @@ Awwards
 
 
 ## Link to Live Site 
-
+https://github.com/encok/Awwards
 
 
 ## Description
@@ -52,6 +52,7 @@ email: enckkipronoh@gmail.com<br/>
 Phone: 0717854859
 ## License
 This is the link to the MIT license used<br/><br/>
-> License link
+> License link<br/>
+https://github.com/encok/Awwards/blob/master/LICENSE
 
 
