@@ -14,10 +14,11 @@ https://github.com/encok/Awwards
 This is an application that a user can sign up and login and then proceed to post the projects they have done. Other people will be able to view and rate the projects posted. The user can also set their profile and edit. A user upon signing in is able to post a project.
 
 ## Screenshots
-<img src="static/images/1.png">
-<img src="static/images/2.png">
-<img src="static/images/3.png">
+<img src="home/static/home/images/1.png"><br/>
+<img src="home/static/home/images/2.png">
+<img src="home/static/home/images/3.png">
 
+ 
 ## Installation Requirements
 Clone this repository and navigate to the folder.
 Run the following commands to allow functionality of the app:-
