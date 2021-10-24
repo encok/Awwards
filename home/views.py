@@ -16,3 +16,7 @@ class Home(TemplateView):
         data = project.objects.all()
         self.context['data'] = data
         return render(request,self.template_name , self.context)
+
+        # search function
+    def search_projects(request):
+        return render(request, 'home/search.html', {})

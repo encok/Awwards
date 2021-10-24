@@ -96,8 +96,9 @@
           </ul>
         </li>
       </ul>
-      <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search Recipe" aria-label="Search">
+      <form method=POST action="{% url 'search-projects' %}" class="d-flex">
+        {% csrf_token %}
+        <input class="form-control me-2" type="search" placeholder="Search Project" aria-label="Search">
         <button id="bs" class="btn btn-outline-success" type="submit">Search</button>
       </form>
     </div>
