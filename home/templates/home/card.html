@@ -8,7 +8,7 @@
           <img src="{{obj.project_pic.url}}" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">{{obj.project_name}}</h5>
-            <h5 class="card-title">{{obj.project_link}}</h5>
+            <!-- <h5 class="card-title">{{obj.project_link}}</h5> -->
             <p class="card-text">Created by: {{obj.created_by.first_name}} {{obj.created_by.last_name}}</p>
             <a href="{% url 'viewrecipe' obj.pk %}" class="btn btn-outline-success" id="bt1">View</a>
             <a href="{% url 'editrecipe' obj.pk %}" class="btn btn-outline-success" id="bt2">Edit</a>
@@ -22,7 +22,7 @@
           <img src="{{obj.project_pic.url}}" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">{{obj.project_name}}</h5>
-            <h5 class="card-title">{{obj.project_link}}</h5>
+            <!-- <h5 class="card-title">{{obj.project_link}}</h5> -->
             <p class="card-text">Created by: {{obj.created_by.first_name}} {{obj.created_by.last_name}}</p>
             <a href="{% url 'viewrecipe' obj.id %}" class="btn btn-outline-success" id="bt">View</a>
           </div>
