@@ -6,6 +6,8 @@ from django.contrib.auth.decorators import login_required
 from django.views.generic import TemplateView
 from django.utils.decorators import method_decorator
 from django.shortcuts import get_object_or_404
+from .models import Rating
+from django.http import JsonResponse
 
 
 # Create your views here.
@@ -48,6 +50,7 @@ class ViewRecipe(TemplateView):
             except Exception:
                 return redirect('createprofile')
         return render(request,self.template_name,self.context)
+
 
 
 @method_decorator(login_required(login_url='login'), name='dispatch')
@@ -96,3 +99,22 @@ class DeleteRecipe(TemplateView):
 #     else:
 #         message = "You haven't searched for any term"
 #         return render(request, 'home/search.html',{"message":message})
+
+def main_view(request):
+    obj = Rating.objects.filter(score=0).order_by("?").first()
+    context ={
+        'object': obj
+    }
+    return render(request, 'ratings/main.html', context)
+
+
+def rate_image(request):
+    if request.method == 'POST':
+        el_id = request.POST.get('el_id')
+        val = request.POST.get('val')
+        print(val)
+        obj = Rating.objects.get(id=el_id)
+        obj.score = val
+        obj.save()
+        return JsonResponse({'success':'true', 'score': val}, safe=False)
+    return JsonResponse({'success':'false'})

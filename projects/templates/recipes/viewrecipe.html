@@ -1,8 +1,9 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Recipe</title>
+    <title>Project</title>
         <!-- CSS only -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
@@ -16,6 +17,7 @@
 </head>
 <body>
 {% include 'home/nav.html' %}
+
 <div class="container">
     <div class="card mb-3">
         <img src="{{obj.project_pic.url}}" class="card-img-top" alt="...">
@@ -34,12 +36,42 @@
                   <li class="list-group-item">
                         <h6><i class="btn btn-info">Rate:<a><i class="fa fa-star"></i></button></a></i></h6>
                         </li>
+                        {{obj.score}}
               </ul>
         </div>
+        
+        <!-- loop for rating -->
+
+        <div class="row">
+          
+            <div class="col text-center">
+                <form class="rate-form" action="" method="POST" id="{{object.id}}">
+                    {% csrf_token %}
+                    <button type="submit" class="fa fa-star fa-3x my-btn" id="first"></button>
+                    <button type="submit" class="fa fa-star fa-3x my-btn" id="second"></button>
+                    <button type="submit" class="fa fa-star fa-3x my-btn" id="third"></button>
+                    <button type="submit" class="fa fa-star fa-3x my-btn" id="fourth"></button>
+                    <button type="submit" class="fa fa-star fa-3x my-btn" id="fifth"></button>
+                </form>
+                <br>
+                <div id="confirm-box"></div>
+            </div>
+            
+        </div>
+
+        <!-- end rating loop -->
         <div class="card-footer text-muted">
             Created by: {{obj.created_by.first_name}} {{obj.created_by.last_name}}
          </div>
+         
     </div>
 </div>
+
 </body>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<!-- Font awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- custom css & js -->
+<link rel="stylesheet" href="{% static 'style.css' %}">
+<script src="{% static 'main.js' %}" defer></script>
 </html>
