@@ -31,8 +31,8 @@ Run the following commands to allow functionality of the app:-
 * pip install -r requirements.txt
 ## Tests
 Run the following command for tests<br>
-* $ python manage.py test instagram
-* $ python manage.py test user
+* $ python manage.py test projects
+* $ python manage.py test users
 
 ## Technologies Used
 ---
